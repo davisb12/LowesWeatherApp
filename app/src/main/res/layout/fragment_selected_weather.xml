@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/lowes_blue"
+        android:theme="@style/MyThemeOverlay_Toolbar"
+        app:layout_constraintBottom_toTopOf="@id/tv_main_temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_white_back_arrow"
+        app:title="Hello" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_main_temp"
+        style="@style/Temperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_feels_temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="72" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_feels_temp"
+        style="@style/FeelsLike"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_main_weather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_temp"
+        tools:text="Feels Like: 78" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_main_weather"
+        style="@style/Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_weather_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_feels_temp"
+        tools:text="Clouds" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_weather_description"
+        style="@style/Description.Main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_weather"
+        tools:text="Broken clouds" />
+</androidx.constraintlayout.widget.ConstraintLayout>
